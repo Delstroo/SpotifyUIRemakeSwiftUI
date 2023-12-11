@@ -26,8 +26,7 @@ struct RecentlyListenedToCell: View {
                         Text(song.title)
                             .foregroundStyle(.white)
                             .lineLimit(2)
-                            .font(.system(size: 14))
-                            .bold()
+                            .font(.system(size: 13).bold())
                         
                         Spacer()
                     }
