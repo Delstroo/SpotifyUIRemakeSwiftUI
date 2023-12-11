@@ -19,6 +19,15 @@ class SpotifyHomeViewModel: ObservableObject {
     @Published var jumpBackInSection: SpotifyItem
     @Published var recentlyPlayed: [SpotifyItem]
     @Published var favoriteArtists: [SpotifyItem]
+    @Published var categorySelected = "All"
+
+    enum SpotifyCategories: String, CaseIterable {
+        case all = "All"
+        case music = "Music"
+        case podcast = "Podcast"
+        case audioBooks = "Audiobooks"
+        case wrapped = "Wrapped"
+    }
     
     init() {
         let jojiColor = Color(hex: 0x800080) // Joji-themed color
@@ -27,24 +36,24 @@ class SpotifyHomeViewModel: ObservableObject {
         let richBrianColor = Color(hex: 0x008080) // Rich Brian-themed color
         
         recentlyListenedTo = [
-            SpotifyItem(title: "Joji Song", image: jojiColor),
-            SpotifyItem(title: "Lalaland Song", image: lalalandColor),
-            SpotifyItem(title: "JVKE Song", image: jvkeColor),
-            SpotifyItem(title: "Rich Brian Song", image: richBrianColor),
-            SpotifyItem(title: "Joji Song", image: jojiColor),
-            SpotifyItem(title: "Lalaland Song", image: lalalandColor),
-            SpotifyItem(title: "JVKE Song", image: jvkeColor),
-            SpotifyItem(title: "Rich Brian Song", image: richBrianColor),
+            SpotifyItem(title: "Christmas Music 🎅🎄🎁", image: .green),
+            SpotifyItem(title: "Your Top Songs 2023", image: .blue),
+            SpotifyItem(title: "LalaLand", image: lalalandColor),
+            SpotifyItem(title: "Cold", image: richBrianColor),
+            SpotifyItem(title: "Glimpse of Us", image: jojiColor),
+            SpotifyItem(title: "La La Land (Original Motion Picture)", image: lalalandColor),
+            SpotifyItem(title: "This is what Space Feels Like", image: jvkeColor),
+            SpotifyItem(title: "Amen", image: richBrianColor),
         ]
         
         newReleaseFromSpecificArtist = SpotifyItem(title: "New Release from Joji", image: jojiColor)
         jumpBackInSection = SpotifyItem(title: "Jump Back in Lalaland", image: lalalandColor)
         
         recentlyPlayed =  [
-            SpotifyItem(title: "Joji - Recently Played", image: jojiColor),
-            SpotifyItem(title: "Lalaland - Recently Played", image: lalalandColor),
-            SpotifyItem(title: "JVKE - Recently Played", image: jvkeColor),
-            SpotifyItem(title: "Rich Brian - Recently Played", image: richBrianColor)
+            SpotifyItem(title: "Glimpse of Us", image: jojiColor),
+            SpotifyItem(title: "La La Land (Original Motion Picture)", image: lalalandColor),
+            SpotifyItem(title: "This is what Space Feels Like", image: jvkeColor),
+            SpotifyItem(title: "Amen", image: richBrianColor)
         ]
         
         favoriteArtists = [
