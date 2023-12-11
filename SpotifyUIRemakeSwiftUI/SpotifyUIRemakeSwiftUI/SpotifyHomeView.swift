@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SpotifyHomeView: View {
+    @State private var viewModel: SpotifyHomeViewModel = SpotifyHomeViewModel()
     var body: some View {
         VStack {
             //Header View
@@ -35,6 +36,11 @@ struct SpotifyHomeView: View {
             
             
             // MARK: Recently listened to tabs
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 16)]) {
+                    ForEach(viewModel.recentlyListenedTo, id: \.title) { song in
+                    RecentlyListenedToCell(song: song)
+                }
+            }
         }
         .preferredColorScheme(.dark)
         .padding()
