@@ -6,41 +6,60 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct SpotifyItem {
     let title: String
-    let image: String
+    let image: Color // Using Color type for hex color values
 }
 
 class SpotifyHomeViewModel: ObservableObject {
-    @Published var filter: [String] = ["All Music", "Podcasts", "Audiobooks"]
-    @Published var recentlyListenedTo: [SpotifyItem] = []
-    @Published var newReleaseFromSpecificArtist: SpotifyItem?
-    @Published var jumpBackInSection: SpotifyItem?
-    @Published var recentlyPlayed: [SpotifyItem] = []
-    @Published var favoriteArtists: [SpotifyItem] = []
+    @Published var recentlyListenedTo: [SpotifyItem]
+    @Published var newReleaseFromSpecificArtist: SpotifyItem
+    @Published var jumpBackInSection: SpotifyItem
+    @Published var recentlyPlayed: [SpotifyItem]
+    @Published var favoriteArtists: [SpotifyItem]
     
     init() {
-        // Set up your mock data here
+        let jojiColor = Color(hex: 0x800080) // Joji-themed color
+        let lalalandColor = Color(hex: 0xFFA07A) // Lalaland-themed color
+        let jvkeColor = Color(hex: 0x6495ED) // JVKE-themed color
+        let richBrianColor = Color(hex: 0x008080) // Rich Brian-themed color
+        
         recentlyListenedTo = [
-            SpotifyItem(title: "Midsummer Madness", image: "url_to_midsummer_madness_image.jpg"), //todo - add imageURL
-            SpotifyItem(title: "Slow Dancing in the Dark", image: "url_to_slow_dancing_in_the_dark_image.jpg"), //todo - add imageURL
-            SpotifyItem(title: "Indigo", image: "url_to_indigo_image.jpg") //todo - add imageURL
+            SpotifyItem(title: "Joji Song", image: jojiColor),
+            SpotifyItem(title: "Lalaland Song", image: lalalandColor),
+            SpotifyItem(title: "JVKE Song", image: jvkeColor),
+            SpotifyItem(title: "Rich Brian Song", image: richBrianColor),
+            SpotifyItem(title: "Joji Song", image: jojiColor),
+            SpotifyItem(title: "Lalaland Song", image: lalalandColor),
+            SpotifyItem(title: "JVKE Song", image: jvkeColor),
+            SpotifyItem(title: "Rich Brian Song", image: richBrianColor),
         ]
         
-        newReleaseFromSpecificArtist = SpotifyItem(title: "Head in the Clouds II", image: "url_to_head_in_the_clouds_image.jpg") //todo - add imageURL
+        newReleaseFromSpecificArtist = SpotifyItem(title: "New Release from Joji", image: jojiColor)
+        jumpBackInSection = SpotifyItem(title: "Jump Back in Lalaland", image: lalalandColor)
         
-        jumpBackInSection = SpotifyItem(title: "Head in the Clouds", image: "url_to_head_in_the_clouds_image.jpg") //todo - add imageURL
-        
-        recentlyPlayed = [
-            SpotifyItem(title: "History", image: "url_to_history_image.jpg"), //todo - add imageURL
-            SpotifyItem(title: "Peach Jam", image: "url_to_peach_jam_image.jpg") //todo - add imageURL
+        recentlyPlayed =  [
+            SpotifyItem(title: "Joji - Recently Played", image: jojiColor),
+            SpotifyItem(title: "Lalaland - Recently Played", image: lalalandColor),
+            SpotifyItem(title: "JVKE - Recently Played", image: jvkeColor),
+            SpotifyItem(title: "Rich Brian - Recently Played", image: richBrianColor)
         ]
         
         favoriteArtists = [
-            SpotifyItem(title: "Rich Brian", image: "https://example.com/rich_brian_image.jpg"), //todo - add imageURL
-            SpotifyItem(title: "Niki", image: "https://example.com/niki_image.jpg"), //todo - add imageURL
-            SpotifyItem(title: "Joji", image: "https://example.com/joji_image.jpg") //todo - add imageURL
+            SpotifyItem(title: "Joji", image: jojiColor),
+            SpotifyItem(title: "Lalaland", image: lalalandColor),
+            SpotifyItem(title: "JVKE", image: jvkeColor),
+            SpotifyItem(title: "Rich Brian", image: richBrianColor)
         ]
+    }
+}
+extension Color {
+    init(hex: UInt) {
+        let red = Double((hex >> 16) & 0xFF) / 255.0
+        let green = Double((hex >> 8) & 0xFF) / 255.0
+        let blue = Double(hex & 0xFF) / 255.0
+        self.init(red: red, green: green, blue: blue)
     }
 }
