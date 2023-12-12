@@ -27,6 +27,6 @@ struct JumpBackInCell: View {
 }
 
 #Preview {
-    JumpBackInCell(song: SpotifyItem(title: "d4vd, Beach House and Tyler, The Creator", image: Color(hex: 0xFF6F61)))
+    JumpBackInCell(song: SpotifyItem(title: "d4vd, Beach House and Tyler, The Creator", image: Color(hex: 0xFF6F61), category: .music))
         .preferredColorScheme(.dark)
 }

@@ -29,6 +29,6 @@ struct RecentlyPlayedCells: View {
 }
 
 #Preview {
-    RecentlyPlayedCells(song: SpotifyItem(title: "Amen", image: Color(hex: 0x800080)))
+    RecentlyPlayedCells(song: SpotifyItem(title: "Amen", image: Color(hex: 0x800080), category: .music))
         .preferredColorScheme(.dark)
 }
