@@ -37,7 +37,7 @@ struct RecentlyListenedToCell: View {
 }
 
 #Preview {
-    RecentlyListenedToCell(song: SpotifyItem(title: "Midsummer Madness", image: Color(hex: 0xFF6F61))) // Placeholder hex color)
+    RecentlyListenedToCell(song: SpotifyItem(title: "Midsummer Madness", image: Color(hex: 0xFF6F61), category: .music)) // Placeholder hex color)
 }
 
 extension View {

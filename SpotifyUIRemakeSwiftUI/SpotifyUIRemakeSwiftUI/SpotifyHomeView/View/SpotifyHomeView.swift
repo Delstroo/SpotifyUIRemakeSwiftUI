@@ -13,31 +13,11 @@ struct SpotifyHomeView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 20) {
-                //Header View
-                HStack {
-                    Text("Good Morning")
-                        .font(.title.bold())
-                    
-                    Spacer()
-                    Group {
-                        Image(systemName: "bell")
-                            .resizable()
-                        Image(systemName: "clock")
-                            .resizable()
-                        Image(systemName: "gear")
-                            .resizable()
-                    }
-                    .frame(width: 24, height: 24)
-                    .padding(.trailing, 6)
-                    
-                }
-                .padding(.trailing)
-                .frame(alignment: .leading)
                 
                 // MARK: For Each for general categories - todo
                 ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(Array(SpotifyHomeViewModel.SpotifyCategories.allCases), id: \.self) { category in
+                            ForEach(viewModel.allCategories, id: \.self) { category in
                                 ZStack {
                                     
                                     if category.rawValue == "Wrapped" {
@@ -103,12 +83,13 @@ struct SpotifyHomeView: View {
                         RecentlyListenedToCell(song: song)
                     }
                 }
+                .ignoresSafeArea()
                 
                 // MARK: Jump Back In
                 ZStack {
                     VStack {
                         HStack {
-                            Text("Jump Back In")
+                            Text("Jump back in")
                                 .frame(alignment: .leading)
                                 .font(.title.bold())
                             
@@ -124,12 +105,13 @@ struct SpotifyHomeView: View {
                         }
                     }
                 }
+                .ignoresSafeArea()
                 
                 // MARK: Recently played
                 ZStack {
                     VStack {
                         HStack {
-                            Text("Recently Played")
+                            Text("Recently played")
                                 .frame(alignment: .leading)
                                 .font(.title.bold())
                             
@@ -145,6 +127,54 @@ struct SpotifyHomeView: View {
                         }
                     }
                 }
+                .ignoresSafeArea()
+                
+                // MARK: Podcast Section
+                ZStack {
+                    VStack {
+                        HStack {
+                            Text("Episodes for you")
+                                .frame(alignment: .leading)
+                                .font(.title.bold())
+                            
+                            Spacer()
+                            
+                        }
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(viewModel.podcasts, id: \.title) { podcast in
+                                PodcastSectionCell(podcast: podcast)
+                                }
+                            }
+                        }
+                    }
+                }
+                .ignoresSafeArea()
+                
+                // MARK: Artists Section
+                ZStack {
+                    VStack {
+                        HStack {
+                            Text("Your favorite artists")
+                                .frame(alignment: .leading)
+                                .font(.title.bold())
+                            
+                            Spacer()
+                            
+                        }
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(viewModel.favoriteArtists, id: \.title) { artist in
+                                FavoriteArtistsCell(artist: artist)
+                                }
+                            }
+                        }
+                    }
+                }
+                .ignoresSafeArea()
+                
             }
             .preferredColorScheme(.dark)
             .padding()
