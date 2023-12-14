@@ -17,6 +17,7 @@
 		1B7C81FF2B27BA3F00818CA8 /* JumpBackInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C81FE2B27BA3F00818CA8 /* JumpBackInCell.swift */; };
 		1B7C82032B28D72D00818CA8 /* PodcastSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C82022B28D72D00818CA8 /* PodcastSectionCell.swift */; };
 		1B7C82052B28E3CF00818CA8 /* FavoriteArtistsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C82042B28E3CF00818CA8 /* FavoriteArtistsCell.swift */; };
+		1B7C82072B2A782900818CA8 /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C82062B2A782900818CA8 /* BottomNavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1B7C81FE2B27BA3F00818CA8 /* JumpBackInCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpBackInCell.swift; sourceTree = "<group>"; };
 		1B7C82022B28D72D00818CA8 /* PodcastSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastSectionCell.swift; sourceTree = "<group>"; };
 		1B7C82042B28E3CF00818CA8 /* FavoriteArtistsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteArtistsCell.swift; sourceTree = "<group>"; };
+		1B7C82062B2A782900818CA8 /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				1B7C81FE2B27BA3F00818CA8 /* JumpBackInCell.swift */,
 				1B7C82022B28D72D00818CA8 /* PodcastSectionCell.swift */,
 				1B7C82042B28E3CF00818CA8 /* FavoriteArtistsCell.swift */,
+				1B7C82062B2A782900818CA8 /* BottomNavigationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				1B7C81E82B25574400818CA8 /* SpotifyUIRemakeSwiftUIApp.swift in Sources */,
 				1B7C82052B28E3CF00818CA8 /* FavoriteArtistsCell.swift in Sources */,
 				1B7C81FF2B27BA3F00818CA8 /* JumpBackInCell.swift in Sources */,
+				1B7C82072B2A782900818CA8 /* BottomNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
