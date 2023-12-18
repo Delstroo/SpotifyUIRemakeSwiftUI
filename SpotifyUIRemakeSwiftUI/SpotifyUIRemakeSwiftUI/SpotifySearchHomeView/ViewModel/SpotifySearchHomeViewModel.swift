@@ -16,7 +16,21 @@ class SpotifySearchHomeViewModel: ObservableObject {
     @Published var favoriteArtists: [SpotifyItem]
     @Published var podcasts: [SpotifyItem]
     @Published var playlists: [SpotifyItem]
+    @Published var searchCategories: [SpotifyItem]
     @Published var categorySelected = "All"
+    
+    
+    enum SpotifySearchCategories: String {
+        case recentSearches = "Recent Searches"
+        case startBrowsing = "Start Browsing"
+        case music = "Music"
+        case podcasts = "Podcasts"
+        case audiobooks = "Audiobooks"
+        case liveEvents = "Live Events"
+        case merch = "Merch"
+        case wrapped = "Wrapped"
+        case musicGenres = "Music Genres"
+    }
     
     let allCategories: [SpotifyItem.SpotifyCategories] = [.all, .music, .podcast, .audioBooks, .wrapped]
 
@@ -26,6 +40,17 @@ class SpotifySearchHomeViewModel: ObservableObject {
         let lalalandColor = Color(hex: 0xFFA07A) // Lalaland-themed color
         let jvkeColor = Color(hex: 0x6495ED) // JVKE-themed color
         let richBrianColor = Color(hex: 0x008080) // Rich Brian-themed color
+        
+        searchCategories = [
+            SpotifyItem(title: "Music", image: .red, category: .all),
+            SpotifyItem(title: "Podcasts", image: .purple, category: .all),
+            SpotifyItem(title: "Audiobooks", image: jvkeColor, category: .all),
+            SpotifyItem(title: "Live Events", image: .yellow, category: .all),
+            SpotifyItem(title: "Merch", image: .orange, category: .all),
+            SpotifyItem(title: "Wrapped", image: richBrianColor, category: .all),
+            
+            
+        ]
         
         recentlyListenedTo = [
             SpotifyItem(title: "Christmas Music 🎅🎄🎁", image: .green, category: .music),

@@ -22,18 +22,6 @@ struct SpotifyItem {
         case wrapped = "Wrapped"
     }
     
-    enum SpotifySearchCategories: String {
-        case recentSearches = "Recent Searches"
-        case startBrowsing = "Start Browsing"
-        case music = "Music"
-        case podcasts = "Podcasts"
-        case audiobooks = "Audiobooks"
-        case liveEvents = "Live Events"
-        case merch = "Merch"
-        case wrapped = "Wrapped"
-        case musicGenres = "Music Genres"
-    }
-    
     init(title: String, image: Color, category: SpotifyCategories, description: String? = nil) {
         self.title = title
         self.image = image

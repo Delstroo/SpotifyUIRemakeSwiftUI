@@ -10,10 +10,11 @@ import SwiftUI
 struct SpotifySearchHomeView: View {
     @State private var songName = ""
     var searchBarHeight = UIScreen.main.bounds.height / 21.04
+    @State private var viewModel: SpotifySearchHomeViewModel = SpotifySearchHomeViewModel()
     
     var body: some View {
         VStack {
-            ScrollView(.vertical) {
+            ScrollView(.vertical, showsIndicators: false) {
                 HStack {
                     // MARK: Header View
                     RoundedRectangle(cornerRadius: .infinity)
@@ -56,9 +57,27 @@ struct SpotifySearchHomeView: View {
                             }
                         }
                 }
-                .padding(.horizontal, 10)
+                // MARK: Start Browsing View
+                HStack {
+                    Text("  Start browsing")
+                        .font(.system(size: 16).bold())
+                        .padding(.vertical, 14)
+                    
+                    Spacer()
+                }
+                    
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 16)]) {
+                    ForEach(viewModel.searchCategories, id: \.title) { category in
+                        StartBrowsingView(category: category)
+                    }
+                }
+                
+                
             }
+            .padding(.horizontal, 10)
         }
+        .background(Color(hex: 0x121212))
+        .preferredColorScheme(.dark)
     }
 }
 
