@@ -18,6 +18,7 @@ class SpotifySearchHomeViewModel: ObservableObject {
     @Published var playlists: [SpotifyItem]
     @Published var searchCategories: [SpotifyItem]
     @Published var categorySelected = "All"
+    @Published var genre: [SpotifyItem]
     
     
     enum SpotifySearchCategories: String {
@@ -42,14 +43,21 @@ class SpotifySearchHomeViewModel: ObservableObject {
         let richBrianColor = Color(hex: 0x008080) // Rich Brian-themed color
         
         searchCategories = [
-            SpotifyItem(title: "Music", image: .red, category: .all),
-            SpotifyItem(title: "Podcasts", image: .purple, category: .all),
-            SpotifyItem(title: "Audiobooks", image: jvkeColor, category: .all),
-            SpotifyItem(title: "Live Events", image: .yellow, category: .all),
-            SpotifyItem(title: "Merch", image: .orange, category: .all),
-            SpotifyItem(title: "Wrapped", image: richBrianColor, category: .all),
+            SpotifyItem(title: "Music", image: Color(hex: 0xEF008E), category: .all),
+            SpotifyItem(title: "Podcasts", image: Color(hex: 0x00664F), category: .all),
+            SpotifyItem(title: "Audiobooks", image: Color(hex: 0x193367), category: .all),
+            SpotifyItem(title: "Live Events", image: Color(hex: 0x9000F1), category: .all),
+            SpotifyItem(title: "Merch", image: Color(hex: 0x008767), category: .all),
+            SpotifyItem(title: "Wrapped", image: Color(hex: 0x470077), category: .all),
             
             
+        ]
+        
+        genre = [
+            SpotifyItem(title: "#reminiscing", image: Color(hex: 0xAB5C44), category: .all),
+            SpotifyItem(title: "#light academia", image: Color(hex: 0xFB4C21), category: .all),
+            SpotifyItem(title: "#bedroom pop", image: Color(hex: 0x50463E), category: .all)
+        
         ]
         
         recentlyListenedTo = [

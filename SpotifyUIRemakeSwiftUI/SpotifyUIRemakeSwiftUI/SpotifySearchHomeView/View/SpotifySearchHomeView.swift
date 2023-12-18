@@ -72,6 +72,19 @@ struct SpotifySearchHomeView: View {
                     }
                 }
                 
+                // MARK: Explore your genres
+                HStack {
+                    Text("  Explore your genres")
+                        .font(.system(size: 16).bold())
+                        .padding(.vertical, 14)
+                    
+                    Spacer()
+                }
+                HStack(spacing: 15) {
+                    ForEach(viewModel.genre, id: \.title) { genre in
+                    GenreVideoView(genre: genre)
+                    }
+                }
                 
             }
             .padding(.horizontal, 10)
