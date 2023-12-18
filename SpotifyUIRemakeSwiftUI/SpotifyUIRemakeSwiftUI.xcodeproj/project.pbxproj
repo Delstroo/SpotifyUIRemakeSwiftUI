@@ -20,6 +20,7 @@
 		1B7C82072B2A782900818CA8 /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C82062B2A782900818CA8 /* BottomNavigationView.swift */; };
 		1B7C820E2B2B8A7600818CA8 /* SpotifySearchHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C820D2B2B8A7600818CA8 /* SpotifySearchHomeView.swift */; };
 		1B7C82102B2D742100818CA8 /* SpotifySearchHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C820F2B2D742100818CA8 /* SpotifySearchHomeViewModel.swift */; };
+		1B7C82122B30C40900818CA8 /* StartBrowsingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C82112B30C40900818CA8 /* StartBrowsingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1B7C82062B2A782900818CA8 /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
 		1B7C820D2B2B8A7600818CA8 /* SpotifySearchHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySearchHomeView.swift; sourceTree = "<group>"; };
 		1B7C820F2B2D742100818CA8 /* SpotifySearchHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySearchHomeViewModel.swift; sourceTree = "<group>"; };
+		1B7C82112B30C40900818CA8 /* StartBrowsingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBrowsingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		1B7C820A2B2B855200818CA8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1B7C82112B30C40900818CA8 /* StartBrowsingView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				1B7C81FB2B2791E500818CA8 /* RecentlyListenedToCell.swift in Sources */,
 				1B7C81F72B25595000818CA8 /* SpotifyHomeViewModel.swift in Sources */,
+				1B7C82122B30C40900818CA8 /* StartBrowsingView.swift in Sources */,
 				1B7C81EA2B25574400818CA8 /* SpotifyHomeView.swift in Sources */,
 				1B7C81FD2B27B70700818CA8 /* RecentlyPlayedCells.swift in Sources */,
 				1B7C820E2B2B8A7600818CA8 /* SpotifySearchHomeView.swift in Sources */,
