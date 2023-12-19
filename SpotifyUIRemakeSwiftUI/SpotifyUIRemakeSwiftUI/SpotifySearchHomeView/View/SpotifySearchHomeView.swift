@@ -86,6 +86,21 @@ struct SpotifySearchHomeView: View {
                     }
                 }
                 
+                // MARK: Browse All
+                HStack {
+                    Text("  Browse all")
+                        .font(.system(size: 16).bold())
+                        .padding(.vertical, 14)
+                    
+                    Spacer()
+                }
+                    
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 16)]) {
+                    ForEach(viewModel.genreType, id: \.title) { genre in
+                        BrowseAllView(genre: genre)
+                    }
+                }
+                
             }
             .padding(.horizontal, 10)
         }
