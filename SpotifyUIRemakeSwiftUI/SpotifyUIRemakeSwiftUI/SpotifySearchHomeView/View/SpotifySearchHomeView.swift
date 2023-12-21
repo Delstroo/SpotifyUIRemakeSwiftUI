@@ -11,6 +11,7 @@ struct SpotifySearchHomeView: View {
     @State private var songName = ""
     var searchBarHeight = UIScreen.main.bounds.height / 21.04
     @State private var viewModel: SpotifySearchHomeViewModel = SpotifySearchHomeViewModel()
+    var openAction: () -> Void
     
     var body: some View {
         VStack {
@@ -57,6 +58,9 @@ struct SpotifySearchHomeView: View {
                             }
                         }
                 }
+                .onTapGesture {
+                    openAction()
+                }
                 // MARK: Start Browsing View
                 HStack {
                     Text("  Start browsing")
@@ -95,7 +99,7 @@ struct SpotifySearchHomeView: View {
                     Spacer()
                 }
                     
-                LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 16)]) {
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 18), GridItem(.flexible(), spacing: 16)]) {
                     ForEach(viewModel.genreType, id: \.title) { genre in
                         BrowseAllView(genre: genre)
                     }
@@ -110,6 +114,6 @@ struct SpotifySearchHomeView: View {
 }
 
 #Preview {
-    SpotifySearchHomeView()
+    SpotifySearchHomeView(openAction: {})
         .preferredColorScheme(.dark)
 }

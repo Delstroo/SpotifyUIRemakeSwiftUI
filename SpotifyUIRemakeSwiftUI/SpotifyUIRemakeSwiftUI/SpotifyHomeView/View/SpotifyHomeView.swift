@@ -179,15 +179,6 @@ struct SpotifyHomeView: View {
             .preferredColorScheme(.dark)
             .padding()
         }
-        .safeAreaInset(edge: .bottom, content: {
-            EmptyView()
-                .frame(height: 60)
-        })
-        .overlay(content: {
-            
-            BottomNavigationView()
-                .ignoresSafeArea()
-        })
         .background(Color(hex: 0x121212))
     }
 }
