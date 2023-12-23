@@ -14,7 +14,7 @@ struct SpotifyUIRemakeSwiftUIApp: App {
             SpotifyHomeView()
                 .safeAreaInset(edge: .bottom, content: {
                     EmptyView()
-                        .frame(height: 62)
+                        .frame(height: 60)
                 })
                 .overlay(content: {
                     
