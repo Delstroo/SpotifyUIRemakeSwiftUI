@@ -44,10 +44,10 @@ class SpotifyHomeViewModel: ObservableObject {
 
 
     init() {
-        let jojiColor = Color(hex: 0x800080) // Joji-themed color
-        let lalalandColor = Color(hex: 0xFFA07A) // Lalaland-themed color
-        let jvkeColor = Color(hex: 0x6495ED) // JVKE-themed color
-        let richBrianColor = Color(hex: 0x008080) // Rich Brian-themed color
+        let jojiColor = Color(hex: 0x800080)
+        let lalalandColor = Color(hex: 0xFFA07A)
+        let jvkeColor = Color(hex: 0x6495ED)
+        let richBrianColor = Color(hex: 0x008080)
         
         recentlyListenedTo = [
             SpotifyItem(title: "Christmas Music 🎅🎄🎁", image: .green, category: .music),
