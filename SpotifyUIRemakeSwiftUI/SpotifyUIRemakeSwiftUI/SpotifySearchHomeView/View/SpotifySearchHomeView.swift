@@ -48,7 +48,7 @@ struct SpotifySearchHomeView: View {
                             HStack {
                                 Image(systemName: "magnifyingglass")
                                     .foregroundStyle(.black)
-                                    .padding(.leading)
+                                    .padding(.leading, 6)
                                 Text("What do you want to listen to?")
                                     .foregroundColor(.black)
                                     .preferredColorScheme(.light)
