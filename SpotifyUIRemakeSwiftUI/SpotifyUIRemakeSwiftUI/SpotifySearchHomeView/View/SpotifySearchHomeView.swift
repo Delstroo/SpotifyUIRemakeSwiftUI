@@ -36,7 +36,7 @@ struct SpotifySearchHomeView: View {
                 }
                 .padding(.horizontal, 10)
                 
-                // MARK: Search Field
+                // MARK: Search Fields
                 ZStack {
                     RoundedRectangle(cornerRadius: 12)
                         .frame(height: searchBarHeight)
