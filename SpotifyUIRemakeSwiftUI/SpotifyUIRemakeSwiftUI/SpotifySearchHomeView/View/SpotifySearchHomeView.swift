@@ -34,7 +34,7 @@ struct SpotifySearchHomeView: View {
                     
                     Image(systemName: "camera")
                         .resizable()
-                        .frame(width: 25, height: 22)
+                        .frame(width: 25, height: 25)
                 }
                 .padding(.horizontal, 10)
                 
