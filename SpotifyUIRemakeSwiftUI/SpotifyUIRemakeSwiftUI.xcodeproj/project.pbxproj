@@ -82,6 +82,7 @@
 		1B7C81E62B25574400818CA8 /* SpotifyUIRemakeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FC4AE57D2B3E84FF006D7A3E /* SpotifySavedHomeView */,
 				1B7C82092B2B852100818CA8 /* SpotifySearchHomeView */,
 				1B7C81F82B2791C700818CA8 /* SpotifyHomeView */,
 				1B7C81E72B25574400818CA8 /* SpotifyUIRemakeSwiftUIApp.swift */,
@@ -174,6 +175,37 @@
 			isa = PBXGroup;
 			children = (
 				1B7C820F2B2D742100818CA8 /* SpotifySearchHomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC4AE57D2B3E84FF006D7A3E /* SpotifySavedHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FC4AE5802B3E8516006D7A3E /* ViewModel */,
+				FC4AE57F2B3E8512006D7A3E /* View */,
+				FC4AE57E2B3E850B006D7A3E /* Components */,
+			);
+			path = SpotifySavedHomeView;
+			sourceTree = "<group>";
+		};
+		FC4AE57E2B3E850B006D7A3E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FC4AE57F2B3E8512006D7A3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC4AE5802B3E8516006D7A3E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
