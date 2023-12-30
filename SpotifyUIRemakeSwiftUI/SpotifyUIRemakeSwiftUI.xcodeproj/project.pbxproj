@@ -27,6 +27,7 @@
 		1B7C821A2B335B4C00818CA8 /* SpotifySongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C82192B335B4C00818CA8 /* SpotifySongCell.swift */; };
 		1B7C821C2B33602600818CA8 /* SpotifySearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C821B2B33602600818CA8 /* SpotifySearchMainView.swift */; };
 		FC4AE5822B3E89BE006D7A3E /* CurrentSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AE5812B3E89BE006D7A3E /* CurrentSongView.swift */; };
+		FC4AE5842B3FD7C1006D7A3E /* SpotifySavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4AE5832B3FD7C1006D7A3E /* SpotifySavedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		1B7C82192B335B4C00818CA8 /* SpotifySongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySongCell.swift; sourceTree = "<group>"; };
 		1B7C821B2B33602600818CA8 /* SpotifySearchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySearchMainView.swift; sourceTree = "<group>"; };
 		FC4AE5812B3E89BE006D7A3E /* CurrentSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSongView.swift; sourceTree = "<group>"; };
+		FC4AE5832B3FD7C1006D7A3E /* SpotifySavedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifySavedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 		FC4AE5802B3E8516006D7A3E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FC4AE5832B3FD7C1006D7A3E /* SpotifySavedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				1B7C82032B28D72D00818CA8 /* PodcastSectionCell.swift in Sources */,
 				1B7C81E82B25574400818CA8 /* SpotifyUIRemakeSwiftUIApp.swift in Sources */,
 				1B7C82052B28E3CF00818CA8 /* FavoriteArtistsCell.swift in Sources */,
+				FC4AE5842B3FD7C1006D7A3E /* SpotifySavedViewModel.swift in Sources */,
 				1B7C82162B32079D00818CA8 /* BrowseAllView.swift in Sources */,
 				1B7C81FF2B27BA3F00818CA8 /* JumpBackInCell.swift in Sources */,
 				1B7C82182B33579A00818CA8 /* SpotifySearchTappedView.swift in Sources */,
