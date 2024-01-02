@@ -11,16 +11,7 @@ import SwiftUI
 struct SpotifyUIRemakeSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            SpotifyHomeView()
-                .safeAreaInset(edge: .bottom, content: {
-                    EmptyView()
-                        .frame(height: 60)
-                })
-                .overlay(content: {
-                    
-                    BottomNavigationView()
-                        .ignoresSafeArea()
-                })
+            HomeView(value: 0)
         }
     }
 }

@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct BottomNavigationView: View {
+    
+    var homeScreenNavigation: () -> Void
+    var searchScreenNavigation: () -> Void
+    var playlistsNavigation: () -> Void
+    
     var body: some View {
         VStack {
             Spacer()
@@ -17,7 +22,7 @@ struct BottomNavigationView: View {
             ZStack {
                 HStack {
                     Button {
-                        
+                        homeScreenNavigation()
                     } label: {
                         Image(systemName:"house.fill")
                             .resizable()
@@ -28,7 +33,7 @@ struct BottomNavigationView: View {
                     Spacer()
                     
                     Button {
-                        
+                        searchScreenNavigation()
                     } label: {
                         Image(systemName: "magnifyingglass")
                             .resizable()
@@ -39,7 +44,7 @@ struct BottomNavigationView: View {
                     Spacer()
                     
                     Button {
-                        
+                        playlistsNavigation()
                     } label: {
                         Image(systemName: "squares.leading.rectangle")
                             .resizable()
@@ -68,6 +73,6 @@ struct BottomNavigationView: View {
 }
 
 #Preview {
-    BottomNavigationView()
+    BottomNavigationView(homeScreenNavigation: {}, searchScreenNavigation: {}, playlistsNavigation: {})
         .preferredColorScheme(.light)
 }
