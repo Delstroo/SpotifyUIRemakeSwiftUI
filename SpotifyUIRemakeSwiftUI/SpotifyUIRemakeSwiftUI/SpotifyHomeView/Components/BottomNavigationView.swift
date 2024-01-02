@@ -12,6 +12,8 @@ struct BottomNavigationView: View {
         VStack {
             Spacer()
             
+            CurrentlyPlayingCell()
+                .padding(.bottom, -16)
             ZStack {
                 HStack {
                     Button {
