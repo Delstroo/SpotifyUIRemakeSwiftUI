@@ -191,24 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				FC4AE5802B3E8516006D7A3E /* ViewModel */,
-				FC4AE57F2B3E8512006D7A3E /* View */,
-				FC4AE57E2B3E850B006D7A3E /* Components */,
 			);
 			path = SpotifySavedHomeView;
-			sourceTree = "<group>";
-		};
-		FC4AE57E2B3E850B006D7A3E /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		FC4AE57F2B3E8512006D7A3E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		FC4AE5802B3E8516006D7A3E /* ViewModel */ = {
