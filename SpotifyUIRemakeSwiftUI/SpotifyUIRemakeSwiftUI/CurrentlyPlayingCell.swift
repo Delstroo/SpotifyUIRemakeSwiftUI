@@ -13,7 +13,7 @@ struct CurrentlyPlayingCell: View {
         VStack {
             Spacer()
             ZStack {
-                RoundedRectangle(cornerRadius: 15)
+                RoundedRectangle(cornerRadius: 13)
                     .frame(width: width, height: width / 7.357)
                     .foregroundColor(Color(hex: 0x6C0E10))
                 HStack {
