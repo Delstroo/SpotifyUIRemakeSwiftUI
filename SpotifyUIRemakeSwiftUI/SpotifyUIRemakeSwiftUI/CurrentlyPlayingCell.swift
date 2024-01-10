@@ -15,7 +15,7 @@ struct CurrentlyPlayingCell: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
                     .frame(width: width, height: width / 7.357)
-                    .foregroundColor(LinearGradient(colors: [Color(hex: 0x6C0E10), .black, .black, .clear], startPoint: .top, endPoint: .bottom))
+                    .foregroundStyle(Color(hex: 0x6C0E10))
                 HStack {
                     Image("joji")
                         .resizable()
