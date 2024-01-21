@@ -11,7 +11,7 @@ import SwiftUI
 
 class SpotifySavedViewModel {
         @Published var genreType: [SpotifyItem]
-        
+    @Published var songs: [SpotifyItem]
         
         enum SpotifySearchCategories: String {
             case recentSearches = "Recent Searches"
