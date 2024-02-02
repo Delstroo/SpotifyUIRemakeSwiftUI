@@ -13,19 +13,14 @@ class SpotifySavedViewModel {
         @Published var genreType: [SpotifyItem]
         @Published var songs: [SpotifyItem]
         
-        enum SpotifySearchCategories: String {
-            case recentSearches = "Recent Searches"
-            case startBrowsing = "Start Browsing"
-            case music = "Music"
-            case podcasts = "Podcasts"
-            case audiobooks = "Audiobooks"
-            case liveEvents = "Live Events"
-            case merch = "Merch"
-            case wrapped = "Wrapped"
-            case musicGenres = "Music Genres"
+        enum SpotifySavedCategories: String {
+            case playlists = "Playlists"
+            case albums = "Albums"
+            case artists = "Artists"
+            case downloaded = "Dowloaded"
         }
         
-        let allCategories: [SpotifyItem.SpotifyCategories] = [.all, .music, .podcast, .audioBooks, .wrapped]
+    let allCategories: [SpotifyItem.SpotifyCategories] = [.playlists, .albums, .artist, .downloaded]
 
 
     init() {
