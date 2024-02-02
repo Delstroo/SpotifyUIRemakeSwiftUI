@@ -20,6 +20,10 @@ struct SpotifyItem {
         case podcast = "Podcast"
         case audioBooks = "Audiobooks"
         case wrapped = "Wrapped"
+        case downloaded = "Downloaded"
+        case artist = "Artist"
+        case playlists = "Playlists"
+        case albums = "Albums"
     }
     
     init(title: String, image: Color, category: SpotifyCategories, description: String? = nil) {
