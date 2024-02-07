@@ -18,4 +18,3 @@ This project is aimed at providing a hands-on experience with SwiftUI by recreat
 Before you start working on the project, ensure you have the following prerequisites:
 
 - Xcode installed on your machine (version 13.0 or later).
-- Basic knowledge of SwiftUI.
