@@ -7,4 +7,4 @@ This project is aimed at providing a hands-on experience with SwiftUI by recreat
 ## Features
 - SwiftUI-based Spotify app UI remake.
 - Interactive and dynamic components.
-- Custom animations and transitions.
+- Custom animations and transitions
