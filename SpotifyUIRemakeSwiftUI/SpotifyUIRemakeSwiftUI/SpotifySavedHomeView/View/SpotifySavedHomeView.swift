@@ -80,7 +80,7 @@ struct SpotifySavedHomeView: View {
                             HStack {
                                 RoundedRectangle(cornerRadius: 0)
                                     .foregroundColor(category.image)
-                                    .frame(width: 60, height: 60)
+                                    .frame(width: 58, height: 58)
                                     
                                 Text(category.title)
                                     .fontWeight(.medium)
