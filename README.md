@@ -1,3 +1,3 @@
 # SpotifyUIRemakeSwiftUI  
 
-This has been a project for myself to continue to better learn SwiftUI.
+This has been a project for myself to continue to better learn SwiftUI by recreating the Spotify UI.
